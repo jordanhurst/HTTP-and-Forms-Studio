@@ -19,6 +19,19 @@
 		}
     window.addEventListener("load", function(){
         let form = document.getElementById('searchForm');
+		// form.addEventListener('submit', function(){
+		// 	let q = document.getElementsByName('q');
+		// 	let engine = document.querySelector("input[name='engine']:checked")
+		// 	if(q.value === ''){
+		// 		window.alert('please enter a query');
+		// 		event.preventDefault();
+		// 	} else if(radio.value === ''){
+		// 		window.alert('please choose a search engine');
+		// 		event.preventDefault
+		// 	} else {
+		// 		setSearchEngine();
+		// 	}
+		// });
 		form.addEventListener('submit', setSearchEngine);
 		form.reset();
 		});
