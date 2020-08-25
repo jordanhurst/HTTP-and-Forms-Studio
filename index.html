@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" type="txt/css" href="normalize.css" />
 		<meta charset="utf-8">
 		<script>
 		// TODO: create a handler
@@ -18,7 +20,7 @@
     window.addEventListener("load", function(){
         let form = document.getElementById('searchForm');
 		form.addEventListener('submit', setSearchEngine);
-		// window.alert('test');
+		form.reset();
 		});
 	</script>
 </head>
@@ -26,12 +28,20 @@
 <body>
 	
 	<form id="searchForm" action="" method="GET">
-		<label><input type="text" name="q"/></label>
-		<label><input type="radio" name="engine" value="google"/>Google</label>
-		<label><input type="radio" name="engine" value="duckDuckGo"/>Duck Duck Go</label>
-		<label><input type="radio" name="engine" value="bing"/>bing</label>
-		<label><input type="radio" name="engine" value="ask"/>Ask</label>
-		<button name="submitButton" type="submit" value="Go!">Go!</button>
+		<div id="inputContainer">
+			<label><input type="text" name="q" placeholder="what would you like to search for?"/></label>
+		</div>
+		<br>
+		<div id="radioGroup">
+			<label><input type="radio" name="engine" value="google" />Google</label>
+			<label><input type="radio" name="engine" value="duckDuckGo"/>Duck Duck Go</label>
+			<label><input type="radio" name="engine" value="bing"/>Bing</label>
+			<label><input type="radio" name="engine" value="ask"/>Ask</label>
+		</div>
+		<br>
+		<div id="submitContainer">
+			<button name="submitButton" type="submit" value="Go!">Go!</button>
+		</div>
 	</form>
 	
 </body>
